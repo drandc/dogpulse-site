@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DogPulse — Dog Health Tracker: Daily Log, Medications, Vaccines &amp; Vet Visits</title>
+<meta name="description" content="DogPulse is a dog health tracker for Android. Log energy, appetite, mood and symptoms in under a minute a day, track medications, vaccinations and vet visits, and let AI spot patterns you might miss. Free to start, no account." />
+<link rel="canonical" href="https://dogpulse.app/" />
+<meta name="theme-color" content="#FFF8F0" />
+<link rel="icon" href="assets/dogpulse-paw.png" />
+<link rel="apple-touch-icon" href="assets/dogpulse-paw.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="DogPulse" />
+<meta property="og:title" content="DogPulse — the dog health tracker that helps you notice" />
+<meta property="og:description" content="DogPulse is a dog health tracker for Android. Log energy, appetite, mood and symptoms in under a minute a day, track medications, vaccinations and vet visits, and let AI spot patterns you might miss. Free to start, no account." />
+<meta property="og:url" content="https://dogpulse.app/" />
+<meta property="og:image" content="https://dogpulse.app/assets/dogpulse-og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="The DogPulse Today screen on a phone against the app's orange brand background" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="DogPulse — the dog health tracker that helps you notice" />
+<meta name="twitter:description" content="DogPulse is a dog health tracker for Android. Log energy, appetite, mood and symptoms in under a minute a day, track medications, vaccinations and vet visits, and let AI spot patterns you might miss. Free to start, no account." />
+<meta name="twitter:image" content="https://dogpulse.app/assets/dogpulse-og.png" />
+<style>
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #FFF8F0; color: #2D3436;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  h1, h2, h3 { text-wrap: pretty; }
+  a { color: #C9541F; text-decoration: none; }
+  a:hover { color: #E8723A; text-decoration: underline; }
+  img { max-width: 100%; }
+a[href*="play.google.com"]:hover { background: #D8622A; color: #FFFFFF; text-decoration: none; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DogPulse",
+  "description": "DogPulse is a dog health tracker for Android. Log energy, appetite, mood and symptoms in under a minute a day, track medications, vaccinations and vet visits, and let AI spot patterns you might miss. Free to start, no account.",
+  "applicationCategory": "HealthApplication",
+  "applicationSubCategory": "Dog health tracker",
+  "operatingSystem": "Android",
+  "url": "https://dogpulse.app/",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.andre.dogpulse",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.andre.dogpulse",
+  "featureList": [
+    "Daily dog health logging (energy, appetite, mood, water, bathroom, food, exercise, notes)",
+    "AI health insights with confidence levels",
+    "Medication tracker with reminders",
+    "Vaccination tracker with due dates",
+    "Vet visit records with documents and PDF reports",
+    "Weight and symptom tracking",
+    "Searchable health history and photo timeline",
+    "Shareable Health Card",
+    "Private memorial"
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free forever: daily health logging, weight charts, photo timeline, food tracker, health history"
+    },
+    {
+      "@type": "Offer",
+      "price": "3.99",
+      "priceCurrency": "USD",
+      "description": "Premium monthly, free for the first 7 days"
+    },
+    {
+      "@type": "Offer",
+      "price": "27.99",
+      "priceCurrency": "USD",
+      "description": "Premium yearly, free for the first 7 days"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "DogPulse",
+    "email": "dogpulse.app@gmail.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is DogPulse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DogPulse is a dog health tracking app for Android. It logs your dog's energy, appetite, mood, water, bathroom, food, exercise and symptoms in under 30 seconds a day, keeps medications, vaccines and vet visits in one place, and uses AI to spot patterns across your logs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is DogPulse free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Daily health logging, weight charts, the photo timeline, the food tracker and your full health history are free forever. Premium adds AI health insights, medication and vaccine reminders, vet visit PDF reports, support for up to 3 dogs and symptom pattern alerts. Premium is free for the first 7 days, then $3.99 per month or $27.99 per year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does DogPulse use AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. DogPulse analyses your own logs and reports patterns it finds, such as a treat that keeps appearing before soft stools, energy drifting down over weeks, or a weight trend worth asking about. Each insight lists the dates behind it and a confidence level. Insights refresh once a day. They are observations to bring to your vet, not a diagnosis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my dog's data private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Everything stays on your phone. There is no account to create, no cloud sync and no ads. Your dog's health record is stored on your device and shared only when you choose to share it, for example sending the Health Card to a sitter or a vet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does DogPulse track?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Energy, appetite, mood, water intake, bathroom, food and treats, exercise, free-text notes, weight, symptoms, photos, medications and doses, vaccines with due dates, vet visits with outcomes and documents, and heat cycles. It also keeps a shareable Health Card and, if you ever need it, a private memorial."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <div style="width:100%;overflow-x:hidden">
+
+  <nav style="position:sticky;top:0;z-index:20;background:rgba(255,248,240,0.92);backdrop-filter:blur(10px);border-bottom:1px solid #E0D5C8">
+    <div style="max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:12px;justify-content:space-between">
+      <a href="#" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+        <img src="assets/dogpulse-paw.png" alt="DogPulse paw mark" width="1240" height="1240" style="width:38px;height:38px;border-radius:11px;display:block" />
+        <span style="font-size:20px;font-weight:700;letter-spacing:-0.02em;color:#2D3436">DogPulse</span>
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" style="display:inline-block;background:#E8723A;color:#FFFFFF;font-size:14px;font-weight:600;padding:10px 16px;border-radius:999px;box-shadow:0 4px 12px rgba(90,50,20,0.18)">Get it on Google Play</a>
+    </div>
+  </nav>
+
+  <main>
+
+  <section style="padding:48px 20px 8px">
+    <div style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:center">
+      <div style="min-width:0">
+        <h1 style="margin:0 0 18px;font-size:clamp(30px,5vw,46px);line-height:1.15;font-weight:700;letter-spacing:-0.025em">DogPulse is the dog health tracker that helps you notice what your dog can't tell you.</h1>
+        <p style="margin:0 0 26px;font-size:clamp(17px,2vw,20px);color:#7A6656;max-width:34em">Log daily health in under a minute, track medications and vet visits, and let AI spot patterns you might miss.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+          <a href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" style="display:inline-block;background:#E8723A;color:#FFFFFF;font-size:17px;font-weight:600;padding:16px 28px;border-radius:999px;box-shadow:0 8px 20px rgba(90,50,20,0.22)">Get it on Google Play</a>
+          <span style="font-size:14px;font-weight:500;color:#9A8578">Free to start · Android</span>
+        </div>
+        <p style="margin:22px 0 0;display:inline-flex;align-items:center;gap:8px;background:#FFE8D6;color:#C9541F;font-size:14px;font-weight:600;padding:9px 15px;border-radius:999px">🔒 No account. No cloud. No ads.</p>
+      </div>
+      <div style="min-width:0">
+        <div style="position:relative;width:100%;max-width:360px;margin:0 auto;aspect-ratio:1080/1430;overflow:hidden;border-radius:24px;box-shadow:0 14px 34px rgba(90,50,20,0.18)">
+          <img src="assets/dogpulse-today.png" alt="DogPulse Today screen showing a Borzoi named Vera with her latest weight, mood and energy, a weekly energy chart, and health reminders for vaccines and medication" width="1080" height="1920" style="position:absolute;left:0;top:-34.3%;width:100%;height:auto;display:block" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:56px 20px">
+    <div style="max-width:760px;margin:0 auto;text-align:center">
+      <h2 style="margin:0;font-size:clamp(24px,3.4vw,34px);line-height:1.3;font-weight:700;letter-spacing:-0.02em">Your dog can't tell you when something's wrong. DogPulse helps you notice.</h2>
+    </div>
+  </section>
+
+  <section style="padding:8px 20px 24px">
+    <div style="max-width:1080px;margin:0 auto">
+      <h2 style="margin:0 0 8px;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#9A8578">What DogPulse does</h2>
+
+      <div style="background:#FFFFFF;border:1px solid #E0D5C8;border-radius:24px;padding:28px;margin:20px 0;box-shadow:0 6px 20px rgba(90,50,20,0.08)">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;align-items:center">
+          <div style="min-width:0">
+            <h3 style="margin:0 0 14px;font-size:clamp(22px,2.6vw,28px);font-weight:700;letter-spacing:-0.02em">Daily health tracking</h3>
+            <p style="margin:0 0 14px;font-size:17px;color:#7A6656">Energy, appetite, mood, water, bathroom, food and treats, exercise, notes — one screen, about thirty seconds. Tap the face that matches the day and you're done.</p>
+            <p style="margin:0;font-size:17px;color:#7A6656">Every entry is dated and kept, so a vague worry in June can be checked against what you actually wrote down in March.</p>
+          </div>
+          <div style="min-width:0">
+            <div style="position:relative;width:100%;max-width:330px;margin:0 auto;aspect-ratio:1080/1430;overflow:hidden;border-radius:22px;box-shadow:0 10px 28px rgba(90,50,20,0.16)">
+              <img src="assets/dogpulse-log.png" alt="DogPulse daily log screen with emoji scales for energy level, appetite, mood and water intake, showing High energy and Happy mood selected" loading="lazy" width="1080" height="1920" style="position:absolute;left:0;top:-34.3%;width:100%;height:auto;display:block" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#FFE8D6;border:1px solid #F0C9A8;border-radius:24px;padding:32px;margin:20px 0;box-shadow:0 8px 24px rgba(90,50,20,0.10)">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;align-items:center">
+          <div style="min-width:0;order:2">
+            <p style="margin:0 0 10px;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#C9541F">The difference</p>
+            <h3 style="margin:0 0 14px;font-size:clamp(24px,3vw,32px);font-weight:700;letter-spacing:-0.02em">AI health insights</h3>
+            <p style="margin:0 0 14px;font-size:17px;color:#6B563F">DogPulse reads your own logs and tells you what it sees: a treat that keeps showing up before soft stools, energy drifting down over three weeks, a weight trend worth a vet's opinion.</p>
+            <p style="margin:0 0 14px;font-size:17px;color:#6B563F">Each insight comes with the dates behind it and a confidence level, so you can judge it yourself — and bring it to your vet with something concrete to point at.</p>
+            <p style="margin:0;font-size:17px;color:#6B563F">Insights refresh once a day.</p>
+          </div>
+          <div style="min-width:0;order:1">
+            <div style="position:relative;width:100%;max-width:330px;margin:0 auto;aspect-ratio:1080/1430;overflow:hidden;border-radius:22px;box-shadow:0 10px 28px rgba(90,50,20,0.18)">
+              <img src="assets/dogpulse-ai-insights.png" alt="DogPulse AI Insights screen showing health pattern analysis for a Borzoi, including a stable health pattern insight, weight stability within normal range, and a possible food-related digestive sensitivity with confidence levels" loading="lazy" width="1080" height="1920" style="position:absolute;left:0;top:-34.3%;width:100%;height:auto;display:block" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF;border:1px solid #E0D5C8;border-radius:24px;padding:28px;margin:20px 0;box-shadow:0 6px 20px rgba(90,50,20,0.08)">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;align-items:center">
+          <div style="min-width:0">
+            <h3 style="margin:0 0 14px;font-size:clamp(22px,2.6vw,28px);font-weight:700;letter-spacing:-0.02em">Medications, vaccines and vet visits</h3>
+            <p style="margin:0 0 14px;font-size:17px;color:#7A6656">Doses with reminders — tap once when given. Vaccines with due dates so a booster doesn't quietly slip past. Vet visits with the date, the outcome, the diagnosis and the prescription, plus documents you can attach.</p>
+            <p style="margin:0 0 18px;font-size:17px;color:#7A6656">Before an appointment, DogPulse helps you prepare what to ask.</p>
+            <p style="margin:0;font-size:17px;font-weight:500;color:#2D3436">And the Health Card: breed, age, weight, microchip, current medications, vet contact and insurance on one page — share it with a sitter or a new vet in one tap.</p>
+          </div>
+          <div style="min-width:0;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start">
+            <div style="position:relative;width:100%;aspect-ratio:1080/1430;overflow:hidden;border-radius:18px;box-shadow:0 8px 22px rgba(90,50,20,0.16)">
+              <img src="assets/dogpulse-meds.png" alt="DogPulse medications screen listing Apoquel and Simparica Trio as active medications with next due dates and a Given today confirmation" loading="lazy" width="1080" height="1920" style="position:absolute;left:0;top:-34.3%;width:100%;height:auto;display:block" />
+            </div>
+            <div style="position:relative;width:100%;aspect-ratio:1080/1430;overflow:hidden;border-radius:18px;box-shadow:0 8px 22px rgba(90,50,20,0.16)">
+              <img src="assets/dogpulse-health-card.png" alt="DogPulse Health Card screen for a Borzoi showing breed, age, weight, microchip number, vet contact details, current medications and insurance policy, with a Share button" loading="lazy" width="1080" height="1920" style="position:absolute;left:0;top:-34.3%;width:100%;height:auto;display:block" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF;border:1px solid #E0D5C8;border-radius:24px;padding:28px;margin:20px 0;box-shadow:0 6px 20px rgba(90,50,20,0.08)">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;align-items:center">
+          <div style="min-width:0;order:2">
+            <h3 style="margin:0 0 14px;font-size:clamp(22px,2.6vw,28px);font-weight:700;letter-spacing:-0.02em">Weight, symptoms and the whole history</h3>
+            <p style="margin:0 0 14px;font-size:17px;color:#7A6656">Weight over time as a chart. Symptoms logged as they happen. Photos gathered into a timeline you'll be glad you kept.</p>
+            <p style="margin:0;font-size:17px;color:#7A6656">Then search the whole history by note, food or symptom, and filter by date or type — the way you'd want to the evening before a vet visit.</p>
+          </div>
+          <div style="min-width:0;order:1">
+            <div style="position:relative;width:100%;max-width:330px;margin:0 auto;aspect-ratio:1080/1430;overflow:hidden;border-radius:22px;box-shadow:0 10px 28px rgba(90,50,20,0.16)">
+              <img src="assets/dogpulse-health-history.png" alt="DogPulse Health History screen with a searchable, date-filtered log of past entries showing energy, mood, appetite, water, bathroom, food, exercise and notes for one day" loading="lazy" width="1080" height="1920" style="position:absolute;left:0;top:-34.3%;width:100%;height:auto;display:block" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="padding:64px 20px;background:#FFFCF8;border-top:1px solid #E0D5C8;border-bottom:1px solid #E0D5C8">
+    <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;align-items:center">
+      <div style="min-width:0">
+        <h2 style="margin:0 0 18px;font-size:clamp(22px,2.6vw,28px);font-weight:700;letter-spacing:-0.02em;color:#4A4340">When a dog passes</h2>
+        <p style="margin:0 0 14px;font-size:17px;color:#7A6656">DogPulse becomes a private memorial: their photos, their story, and gentle reminders on their birthday and the day they left.</p>
+        <p style="margin:0;font-size:17px;font-weight:500;color:#4A4340">Because they were family.</p>
+      </div>
+      <div style="min-width:0">
+        <div style="position:relative;width:100%;max-width:300px;margin:0 auto;aspect-ratio:1080/1430;overflow:hidden;border-radius:22px;box-shadow:0 8px 24px rgba(90,50,20,0.10)">
+          <img src="assets/dogpulse-memorial.png" alt="DogPulse memorial screen for a Labrador named Milady, in loving memory, with her photos and gentle yearly birthday reminders" loading="lazy" width="1080" height="1920" style="position:absolute;left:0;top:-34.3%;width:100%;height:auto;display:block" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:64px 20px">
+    <div style="max-width:1080px;margin:0 auto">
+      <h2 style="margin:0 0 10px;font-size:clamp(24px,3.2vw,32px);font-weight:700;letter-spacing:-0.02em">What it costs</h2>
+      <p style="margin:0 0 28px;font-size:17px;color:#7A6656">Premium is free for the first 7 days. Basic tracking stays free forever.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+        <div style="background:#FFFFFF;border:1px solid #E0D5C8;border-radius:22px;padding:26px;box-shadow:0 6px 20px rgba(90,50,20,0.08)">
+          <h3 style="margin:0 0 4px;font-size:20px;font-weight:700">Free</h3>
+          <p style="margin:0 0 18px;font-size:15px;font-weight:500;color:#9A8578">Forever, no account needed</p>
+          <ul style="margin:0;padding:0;list-style:none;display:grid;gap:11px;font-size:16px;color:#7A6656">
+            <li>Daily health logging, no limits</li>
+            <li>Weight tracking with charts</li>
+            <li>Photo timeline</li>
+            <li>Food and treat tracker</li>
+            <li>Full searchable health history</li>
+          </ul>
+        </div>
+        <div style="background:#FFFFFF;border:2px solid #E8723A;border-radius:22px;padding:26px;box-shadow:0 10px 26px rgba(90,50,20,0.14)">
+          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;margin:0 0 4px">
+            <h3 style="margin:0;font-size:20px;font-weight:700">Premium</h3>
+            <span style="background:#FFE8D6;color:#C9541F;font-size:13px;font-weight:600;padding:4px 10px;border-radius:999px">Free for 7 days</span>
+          </div>
+          <p style="margin:0 0 18px;font-size:15px;font-weight:500;color:#9A8578">$3.99 / month or $27.99 / year</p>
+          <ul style="margin:0;padding:0;list-style:none;display:grid;gap:11px;font-size:16px;color:#7A6656">
+            <li>AI health insights</li>
+            <li>Medication and vaccine reminders</li>
+            <li>Vet visit PDF reports</li>
+            <li>Up to 3 dogs</li>
+            <li>Symptom pattern alerts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 20px 64px">
+    <div style="max-width:1080px;margin:0 auto;background:#2D3436;border-radius:24px;padding:36px 28px;text-align:center">
+      <h2 style="margin:0 0 12px;font-size:clamp(22px,2.8vw,30px);font-weight:700;color:#FFF8F0;letter-spacing:-0.02em">Everything stays on your phone. No account. No cloud. No ads.</h2>
+      <p style="margin:0;font-size:17px;color:#E0D5C8">Your dog's health record is yours. DogPulse works offline and never uploads it anywhere.</p>
+    </div>
+  </section>
+
+  <section style="padding:0 20px 64px">
+    <div style="max-width:760px;margin:0 auto">
+      <h2 style="margin:0 0 28px;font-size:clamp(24px,3.2vw,32px);font-weight:700;letter-spacing:-0.02em">Questions people ask</h2>
+      <div style="display:grid;gap:18px">
+        <div style="background:#FFFFFF;border:1px solid #E0D5C8;border-radius:18px;padding:22px;box-shadow:0 4px 16px rgba(90,50,20,0.07)">
+          <h3 style="margin:0 0 8px;font-size:18px;font-weight:600">What is DogPulse?</h3>
+          <p style="margin:0;font-size:16px;color:#7A6656">DogPulse is a dog health tracking app for Android. It logs your dog's energy, appetite, mood, water, bathroom, food, exercise and symptoms in under 30 seconds a day, keeps medications, vaccines and vet visits in one place, and uses AI to spot patterns across your logs.</p>
+        </div>
+        <div style="background:#FFFFFF;border:1px solid #E0D5C8;border-radius:18px;padding:22px;box-shadow:0 4px 16px rgba(90,50,20,0.07)">
+          <h3 style="margin:0 0 8px;font-size:18px;font-weight:600">Is DogPulse free?</h3>
+          <p style="margin:0;font-size:16px;color:#7A6656">Yes. Daily health logging, weight charts, the photo timeline, the food tracker and your full health history are free forever. Premium adds AI health insights, medication and vaccine reminders, vet visit PDF reports, support for up to 3 dogs and symptom pattern alerts. Premium is free for the first 7 days, then $3.99 per month or $27.99 per year.</p>
+        </div>
+        <div style="background:#FFFFFF;border:1px solid #E0D5C8;border-radius:18px;padding:22px;box-shadow:0 4px 16px rgba(90,50,20,0.07)">
+          <h3 style="margin:0 0 8px;font-size:18px;font-weight:600">Does DogPulse use AI?</h3>
+          <p style="margin:0;font-size:16px;color:#7A6656">Yes. DogPulse analyses your own logs and reports patterns it finds — a treat that keeps appearing before soft stools, energy drifting down over weeks, a weight trend worth asking about. Each insight lists the dates behind it and a confidence level. Insights refresh once a day. They are observations to bring to your vet, not a diagnosis.</p>
+        </div>
+        <div style="background:#FFFFFF;border:1px solid #E0D5C8;border-radius:18px;padding:22px;box-shadow:0 4px 16px rgba(90,50,20,0.07)">
+          <h3 style="margin:0 0 8px;font-size:18px;font-weight:600">Is my dog's data private?</h3>
+          <p style="margin:0;font-size:16px;color:#7A6656">Everything stays on your phone. There is no account to create, no cloud sync and no ads. Your dog's health record is stored on your device and shared only when you choose to share it — for example, sending the Health Card to a sitter or a vet.</p>
+        </div>
+        <div style="background:#FFFFFF;border:1px solid #E0D5C8;border-radius:18px;padding:22px;box-shadow:0 4px 16px rgba(90,50,20,0.07)">
+          <h3 style="margin:0 0 8px;font-size:18px;font-weight:600">What does DogPulse track?</h3>
+          <p style="margin:0;font-size:16px;color:#7A6656">Energy, appetite, mood, water intake, bathroom, food and treats, exercise, free-text notes, weight, symptoms, photos, medications and doses, vaccines with due dates, vet visits with outcomes and documents, and heat cycles. It also keeps a shareable Health Card and, if you ever need it, a private memorial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 20px 72px">
+    <div style="max-width:760px;margin:0 auto;text-align:center">
+      <h2 style="margin:0 0 16px;font-size:clamp(24px,3.2vw,32px);font-weight:700;letter-spacing:-0.02em">Start noticing today</h2>
+      <p style="margin:0 0 26px;font-size:17px;color:#7A6656">One minute a day. Free to start, no account.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" style="display:inline-block;background:#E8723A;color:#FFFFFF;font-size:17px;font-weight:600;padding:16px 30px;border-radius:999px;box-shadow:0 8px 20px rgba(90,50,20,0.22)">Get it on Google Play</a>
+    </div>
+  </section>
+
+  </main>
+
+  <footer style="border-top:1px solid #E0D5C8;padding:32px 20px 44px;background:#FFFCF8">
+    <div style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;align-items:start">
+      <div style="min-width:0;display:flex;align-items:center;gap:10px">
+        <img src="assets/dogpulse-paw.png" alt="DogPulse paw mark" loading="lazy" width="1240" height="1240" style="width:32px;height:32px;border-radius:9px;display:block" />
+        <span style="font-size:17px;font-weight:700;color:#2D3436">DogPulse</span>
+      </div>
+      <nav style="min-width:0;display:grid;gap:10px;font-size:15px">
+        <a href="PRIVACY_POLICY_URL">Privacy Policy</a>
+        <a href="TERMS_URL">Terms of Service</a>
+        <a href="mailto:dogpulse.app@gmail.com">dogpulse.app@gmail.com</a>
+        <a href="https://play.google.com/store/apps/details?id=com.andre.dogpulse">Get it on Google Play</a>
+      </nav>
+      <p style="min-width:0;margin:0;font-size:14px;color:#9A8578">© 2026 DogPulse. Made for people who watch their dogs closely.</p>
+    </div>
+  </footer>
+
+  </div>
+</body>
+</html>
