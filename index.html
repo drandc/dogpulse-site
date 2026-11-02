@@ -4,16 +4,17 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>DogPulse: Dog Health Tracker, Daily Log, Medications, Vaccines &amp; Vet Visits</title>
-<meta name="description" content="DogPulse is a dog health tracker for Android. Log energy, appetite, mood and symptoms in under a minute a day, track medications, vaccinations and vet visits, and let AI spot patterns you might miss. Free to start, no account." />
+<meta name="description" content="DogPulse is a dog health tracker for iPhone and Android. Log energy, appetite, mood and symptoms in under a minute a day, track medications, vaccinations and vet visits, and let AI spot patterns you might miss. Free to start, no account." />
 <link rel="canonical" href="https://dogpulse.app/" />
 <meta name="theme-color" content="#FFF8F0" />
+<script>(function(){var ua=navigator.userAgent||"";if(/iPad|iPhone|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1)){document.documentElement.className+=" is-ios";}})();</script>
 <link rel="icon" href="assets/dogpulse-paw.png" />
 <link rel="apple-touch-icon" href="assets/dogpulse-paw.png" />
 <link rel="preload" as="image" href="assets/dogpulse-today.png" fetchpriority="high" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="DogPulse" />
 <meta property="og:title" content="DogPulse, the dog health tracker that helps you notice" />
-<meta property="og:description" content="DogPulse is a dog health tracker for Android. Log energy, appetite, mood and symptoms in under a minute a day, track medications, vaccinations and vet visits, and let AI spot patterns you might miss. Free to start, no account." />
+<meta property="og:description" content="DogPulse is a dog health tracker for iPhone and Android. Log energy, appetite, mood and symptoms in under a minute a day, track medications, vaccinations and vet visits, and let AI spot patterns you might miss. Free to start, no account." />
 <meta property="og:url" content="https://dogpulse.app/" />
 <meta property="og:image" content="https://dogpulse.app/assets/dogpulse-og.png" />
 <meta property="og:image:width" content="1200" />
@@ -21,7 +22,7 @@
 <meta property="og:image:alt" content="The DogPulse Today screen on a phone against the app's orange brand background" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="DogPulse, the dog health tracker that helps you notice" />
-<meta name="twitter:description" content="DogPulse is a dog health tracker for Android. Log energy, appetite, mood and symptoms in under a minute a day, track medications, vaccinations and vet visits, and let AI spot patterns you might miss. Free to start, no account." />
+<meta name="twitter:description" content="DogPulse is a dog health tracker for iPhone and Android. Log energy, appetite, mood and symptoms in under a minute a day, track medications, vaccinations and vet visits, and let AI spot patterns you might miss. Free to start, no account." />
 <meta name="twitter:image" content="https://dogpulse.app/assets/dogpulse-og.png" />
 <style>
 :root{--ink:#2D3436;--muted:#7A6656;--faint:#9A8578;--bg:#FFF8F0;--bg2:#FFFCF8;--card:#FFFFFF;--line:#E0D5C8;--tint:#FFE8D6;--tintline:#F0C9A8;--brand:#E8723A;--brand-d:#C9541F;--brand-p:#D8622A}
@@ -68,22 +69,40 @@ a:hover{color:var(--brand);text-decoration:underline}
 .dp-sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,248,240,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(90,50,20,.10);display:none}
 .dp-sticky-in{max-width:520px;margin:0 auto}
 .dp-sticky .cta{width:100%;font-size:16px;padding:15px 18px}
-@media (max-width:760px){.dp-sticky{display:block}body{padding-bottom:88px}.feat{padding:22px}.hero-cta{width:100%;gap:10px}.hero-cta .cta,.hero-cta .cta-ghost{width:100%}.cta-lg{font-size:16px;padding:16px 24px}.proof{gap:8px}.proof li{font-size:13px;padding:7px 12px}}
-.dp-ios{display:none;background:var(--tint);border:1px solid var(--tintline);border-radius:18px;padding:20px;margin:16px auto 0;max-width:1040px}
-.dp-ios.on{display:block}
+@media (max-width:760px){.dp-sticky{display:block}body{padding-bottom:88px}.feat{padding:22px}.hero-cta{width:100%;gap:10px}.hero-cta .cta,.hero-cta .cta-ghost,.hero-cta .dp-store{width:100%}.cta-lg{font-size:16px;padding:16px 24px}.proof{gap:8px}.proof li{font-size:13px;padding:7px 12px}}
+.dp-store{display:inline-flex;align-items:center;justify-content:center;line-height:0;border-radius:9px;transition:opacity .15s ease}
+.dp-store:hover{opacity:.85;text-decoration:none}
+.dp-store img{display:block;width:auto;height:58px}
+.dp-store-sm img{height:42px}
+.dp-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center}
+.dp-nav-stores{display:flex;gap:10px;align-items:center}
+.dp-sticky .dp-store{display:none}
+.dp-sticky .dp-store img{height:54px}
+html.is-ios .dp-sticky .dp-store{display:flex}
+html.is-ios .dp-sticky .dp-play{display:none}
+html.is-ios .hero-cta .dp-store{order:-1}
+@media (max-width:560px){html:not(.is-ios) .dp-nav-stores .dp-store{display:none}html.is-ios .dp-nav-stores .dp-play{display:none}}
+.dp-ios{display:none;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:var(--tint);border:1px solid var(--tintline);border-radius:18px;padding:16px 20px;margin:16px auto 0;max-width:1040px}
+html.is-ios .dp-ios{display:flex}
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "DogPulse",
-  "description": "DogPulse is a dog health tracker for Android. Log energy, appetite, mood and symptoms in under a minute a day, track medications, vaccinations and vet visits, and let AI spot patterns you might miss. Free to start, no account.",
+  "description": "DogPulse is a dog health tracker for iPhone and Android. Log energy, appetite, mood and symptoms in under a minute a day, track medications, vaccinations and vet visits, and let AI spot patterns you might miss. Free to start, no account.",
   "applicationCategory": "HealthApplication",
   "applicationSubCategory": "Dog health tracker",
-  "operatingSystem": "Android",
+  "operatingSystem": "Android, iOS",
   "url": "https://dogpulse.app/",
-  "installUrl": "https://play.google.com/store/apps/details?id=com.andre.dogpulse",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=com.andre.dogpulse",
+  "installUrl": [
+    "https://play.google.com/store/apps/details?id=com.andre.dogpulse",
+    "https://apps.apple.com/app/id6824267981"
+  ],
+  "downloadUrl": [
+    "https://play.google.com/store/apps/details?id=com.andre.dogpulse",
+    "https://apps.apple.com/app/id6824267981"
+  ],
   "featureList": [
     "Daily dog health logging (energy, appetite, mood, water, bathroom, food, exercise, notes)",
     "AI health insights with confidence levels",
@@ -122,7 +141,7 @@ a:hover{color:var(--brand);text-decoration:underline}
     "url": "https://dogpulse.app/",
     "logo": "https://dogpulse.app/assets/dogpulse-paw.png"
   },
-  "dateModified": "2026-10-21",
+  "dateModified": "2026-11-02",
   "inLanguage": "en"
 }
 </script>
@@ -131,13 +150,14 @@ a:hover{color:var(--brand);text-decoration:underline}
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"What is DogPulse?","acceptedAnswer":{"@type":"Answer","text":"DogPulse is a dog health tracking app for Android. It logs your dog's energy, appetite, mood, water, bathroom, food, exercise and symptoms in under 30 seconds a day, keeps medications, vaccines and vet visits in one place, and uses AI to spot patterns across your logs."}},
+    {"@type":"Question","name":"What is DogPulse?","acceptedAnswer":{"@type":"Answer","text":"DogPulse is a dog health tracking app for iPhone and Android. It logs your dog's energy, appetite, mood, water, bathroom, food, exercise and symptoms in under 30 seconds a day, keeps medications, vaccines and vet visits in one place, and uses AI to spot patterns across your logs."}},
     {"@type":"Question","name":"Is DogPulse free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Basic tracking is free forever, with no account needed, and you get one starter AI insight free. Premium adds live AI observations from your dog's logs, vet visit reports, support for up to 3 dogs and more, for $3.99 per month or $27.99 per year."}},
+    {"@type":"Question","name":"How do I manage or cancel my Premium subscription?","acceptedAnswer":{"@type":"Answer","text":"Premium is billed by the store you subscribed through, so you manage it there. On iPhone, use your Apple Account settings: open Settings, tap your name, then Subscriptions. On Android, open Google Play, tap your profile icon, then Payments and subscriptions."}},
     {"@type":"Question","name":"Does DogPulse use AI?","acceptedAnswer":{"@type":"Answer","text":"Yes. DogPulse analyses your own logs and reports patterns it finds, such as a treat that keeps appearing before soft stools, energy drifting down over weeks, or a weight trend worth asking about. Each insight comes with a confidence level so you can judge how much weight to give it. Insights refresh once a day. Everyone gets a first insight free; Premium unlocks the fuller analysis. They are observations to bring to your vet, not a diagnosis."}},
     {"@type":"Question","name":"Is my dog's data private?","acceptedAnswer":{"@type":"Answer","text":"Your dog's health record is stored on your phone. There is no account to create, no cloud sync of your records, and no ads. It is shared only when you choose to share it, for example sending the Health Card to a sitter or a vet. Two things can leave the device: AI insights send the relevant log data for analysis only if you allow it, and crash reports and, if you choose to share them, anonymous usage data help us find and fix problems."}},
     {"@type":"Question","name":"What does DogPulse track?","acceptedAnswer":{"@type":"Answer","text":"Energy, appetite, mood, water intake, bathroom, food and treats, exercise, free-text notes, weight, symptoms, photos, medications and doses, vaccines with due dates, vet visits with reasons, outcomes, prescriptions and documents, and heat cycles. It also keeps a shareable Health Card and, if you ever need it, a private memorial."}},
-    {"@type":"Question","name":"How do I track my dog's health day to day?","acceptedAnswer":{"@type":"Answer","text":"Log the same few things every day so changes stand out: energy, appetite, mood, water, bathroom and anything unusual. Consistency matters more than detail, because a single day tells you little while four weeks of entries show direction. DogPulse is built for this, one screen, about thirty seconds, and every entry dated and kept so you can compare months later."}},
-    {"@type":"Question","name":"Is DogPulse available on iPhone?","acceptedAnswer":{"@type":"Answer","text":"Not yet. DogPulse is currently an Android app, available on Google Play. There is no iOS version at this time."}},
+    {"@type":"Question","name":"How do I track my dog's health day to day?","acceptedAnswer":{"@type":"Answer","text":"Log the same few things every day so changes stand out: energy, appetite, mood, water, bathroom and anything unusual. Consistency matters more than detail, because a single day tells you little while four weeks of entries show direction. DogPulse is built for this: one screen, about thirty seconds, and every entry dated and kept so you can compare months later."}},
+    {"@type":"Question","name":"Is DogPulse available on iPhone?","acceptedAnswer":{"@type":"Answer","text":"Yes. DogPulse is on the App Store for iPhone and on Google Play for Android. On the App Store, look for DogPulse: Dog Health Tracker."}},
     {"@type":"Question","name":"Can I track more than one dog?","acceptedAnswer":{"@type":"Answer","text":"Yes. DogPulse Premium supports up to 3 dogs, each with their own logs, weight history, medications, vaccines and vet records. The free version tracks one dog."}},
     {"@type":"Question","name":"Does DogPulse work offline?","acceptedAnswer":{"@type":"Answer","text":"Day-to-day tracking works offline. Logging, history, weights, medications and records are stored on your phone and need no connection. AI health insights require internet, because they are generated remotely. Crash reports, optional usage analytics and subscription checks also sync when you are online."}},
     {"@type":"Question","name":"Why use a dog health app instead of a notebook?","acceptedAnswer":{"@type":"Answer","text":"A notebook records, but it cannot compare. DogPulse charts weight over time, searches months of notes by food or symptom, reminds you before a vaccine is due, and reads your own logs for patterns you would have to spot yourself. At a vet appointment you can show dates and trends rather than trying to recall them."}}
@@ -149,7 +169,7 @@ a:hover{color:var(--brand);text-decoration:underline}
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": "How to track your dog's health with DogPulse",
-  "description": "A simple daily routine for noticing changes in your dog's health early, using DogPulse on Android.",
+  "description": "A simple daily routine for noticing changes in your dog's health early, using DogPulse on iPhone or Android.",
   "totalTime": "PT30S",
   "step": [
     {"@type":"HowToStep","position":1,"name":"Log the day","text":"Open DogPulse and tap the faces that match your dog's energy, appetite, mood and water intake. Add food, exercise, symptoms or a note if anything stood out. This takes about thirty seconds."},
@@ -169,16 +189,18 @@ a:hover{color:var(--brand);text-decoration:underline}
 <img src="assets/dogpulse-paw.png" alt="DogPulse paw mark" width="512" height="512" style="width:36px;height:36px;border-radius:11px;display:block" />
 <span style="font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--ink)">DogPulse</span>
 </a>
+<div class="dp-nav-stores">
 <a class="cta cta-sm dp-play" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it free on Google&nbsp;Play</a>
+<a class="dp-store dp-store-sm" href="/iphone"><!-- TODO: swap placeholder for the official Apple badge (see assets/app-store-badge-PLACEHOLDER.svg) --><img src="assets/app-store-badge-PLACEHOLDER.svg" alt="Download on the App Store" width="120" height="40" /></a>
+</div>
 </div>
 </nav>
 
 <main id="top">
 
 <div id="dp-ios" class="dp-ios">
-<p style="font-size:17px;font-weight:700;margin:0 0 6px">Looks like you're on an iPhone</p>
-<p style="font-size:15px;color:var(--muted);margin:0 0 14px">DogPulse is Android-only right now. Leave your email and you'll be first to know when it lands on iOS.</p>
-<a class="cta" style="font-size:15px;padding:12px 20px" href="mailto:dogpulse.app@gmail.com?subject=iOS%20waitlist&amp;body=I'd%20like%20DogPulse%20on%20iPhone.">Tell me when iOS is ready</a>
+<p style="font-size:17px;font-weight:700;margin:0">Now on iPhone</p>
+<a class="dp-store dp-store-sm" href="/iphone"><!-- TODO: swap placeholder for the official Apple badge (see assets/app-store-badge-PLACEHOLDER.svg) --><img src="assets/app-store-badge-PLACEHOLDER.svg" alt="Download on the App Store" width="120" height="40" /></a>
 </div>
 
 <section style="padding:52px 0 8px">
@@ -188,6 +210,7 @@ a:hover{color:var(--brand);text-decoration:underline}
 <p style="font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:32em;margin:0 0 28px">DogPulse is the dog health tracker that turns thirty seconds a day into a record your vet can actually use, and reads it back to you when something starts to drift.</p>
 <div class="hero-cta" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
 <a class="cta cta-lg dp-play" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it free on Google&nbsp;Play</a>
+<a class="dp-store" href="/iphone"><!-- TODO: swap placeholder for the official Apple badge (see assets/app-store-badge-PLACEHOLDER.svg) --><img src="assets/app-store-badge-PLACEHOLDER.svg" alt="Download on the App Store" width="120" height="40" /></a>
 <a class="cta-ghost" href="#how">See how it works</a>
 </div>
 <ul class="proof">
@@ -281,8 +304,11 @@ a:hover{color:var(--brand);text-decoration:underline}
 <div style="background:var(--brand);border-radius:24px;padding:40px 28px;text-align:center;box-shadow:0 12px 30px rgba(90,50,20,.18)">
 <h2 class="h2" style="color:#fff;margin:0 0 10px;max-width:22em;margin-inline:auto">Start the record before you need it.</h2>
 <p style="font-size:17px;color:#FFF0E4;margin:0 0 24px;max-width:34em;margin-inline:auto">The day you wish you'd been writing it down is the day it's too late to start. Thirty seconds tonight is enough.</p>
+<div class="dp-row">
 <a class="cta cta-lg dp-play" style="background:#fff;color:var(--brand-d)" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it free on Google&nbsp;Play</a>
-<p style="margin:14px 0 0;font-size:14px;color:#FFE3CE">Free to start · No account · Android</p>
+<a class="dp-store" href="/iphone"><!-- TODO: swap placeholder for the official Apple badge (see assets/app-store-badge-PLACEHOLDER.svg) --><img src="assets/app-store-badge-PLACEHOLDER.svg" alt="Download on the App Store" width="120" height="40" /></a>
+</div>
+<p style="margin:14px 0 0;font-size:14px;color:#FFE3CE">Free to start · No account · iPhone and Android</p>
 </div>
 </div>
 </section>
@@ -334,8 +360,8 @@ a:hover{color:var(--brand);text-decoration:underline}
 <li>Document attachments for vet visits</li>
 <li>Export your health data as CSV</li>
 </ul>
-<a class="cta dp-play" style="width:100%;font-size:16px;padding:15px 20px" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get DogPulse Premium</a>
-<p style="margin:10px 0 0;font-size:13.5px;color:var(--faint);text-align:center">Cancel any time in Google Play</p>
+<a class="cta dp-play dp-premium" style="width:100%;font-size:16px;padding:15px 20px" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get DogPulse Premium</a>
+<p style="margin:10px 0 0;font-size:13.5px;color:var(--faint);text-align:center">Cancel any time in Google Play or in your Apple Account settings</p>
 </div>
 </div>
 </div>
@@ -369,13 +395,14 @@ a:hover{color:var(--brand);text-decoration:underline}
 <section style="padding:60px 0">
 <div class="narrow">
 <h2 class="h2" style="margin:0 0 18px">Questions people ask</h2>
-<details class="faq" open><summary>What is DogPulse?</summary><p>DogPulse is a dog health tracking app for Android. It logs your dog's energy, appetite, mood, water, bathroom, food, exercise and symptoms in under 30 seconds a day, keeps medications, vaccines and vet visits in one place, and uses AI to spot patterns across your logs.</p></details>
+<details class="faq" open><summary>What is DogPulse?</summary><p>DogPulse is a dog health tracking app for iPhone and Android. It logs your dog's energy, appetite, mood, water, bathroom, food, exercise and symptoms in under 30 seconds a day, keeps medications, vaccines and vet visits in one place, and uses AI to spot patterns across your logs.</p></details>
 <details class="faq"><summary>Is DogPulse free?</summary><p>Yes. Basic tracking is free forever, with no account needed, and you get one starter AI insight free. Premium adds live AI observations from your dog's logs, vet visit reports, support for up to 3 dogs and more, for $3.99 per month or $27.99 per year.</p></details>
+<details class="faq"><summary>How do I manage or cancel my Premium subscription?</summary><p>Premium is billed by the store you subscribed through, so you manage it there. On iPhone, use your Apple Account settings: open Settings, tap your name, then Subscriptions. On Android, open Google Play, tap your profile icon, then Payments and subscriptions.</p></details>
 <details class="faq"><summary>Does DogPulse use AI?</summary><p>Yes. DogPulse analyses your own logs and reports patterns it finds, such as a treat that keeps appearing before soft stools, energy drifting down over weeks, or a weight trend worth asking about. Each insight comes with a confidence level so you can judge how much weight to give it. Insights refresh once a day. Everyone gets a first insight free; Premium unlocks the fuller analysis. They are observations to bring to your vet, not a diagnosis.</p></details>
 <details class="faq"><summary>Is my dog's data private?</summary><p>Your dog's health record is stored on your phone. There is no account to create, no cloud sync of your records, and no ads. It is shared only when you choose to share it, for example sending the Health Card to a sitter or a vet. Two things can leave the device: AI insights send the relevant log data for analysis only if you allow it, and crash reports and, if you choose to share them, anonymous usage data help us find and fix problems.</p></details>
 <details class="faq"><summary>What does DogPulse track?</summary><p>Energy, appetite, mood, water intake, bathroom, food and treats, exercise, free-text notes, weight, symptoms, photos, medications and doses, vaccines with due dates, vet visits with reasons, outcomes, prescriptions and documents, and heat cycles. It also keeps a shareable Health Card and, if you ever need it, a private memorial.</p></details>
 <details class="faq"><summary>How do I track my dog's health day to day?</summary><p>Log the same few things every day so changes stand out: energy, appetite, mood, water, bathroom and anything unusual. Consistency matters more than detail, because a single day tells you little while four weeks of entries show direction. DogPulse is built for this: one screen, about thirty seconds, and every entry dated and kept so you can compare months later.</p></details>
-<details class="faq"><summary>Is DogPulse available on iPhone?</summary><p>Not yet. DogPulse is currently an Android app, available on Google Play. There is no iOS version at this time.</p></details>
+<details class="faq"><summary>Is DogPulse available on iPhone?</summary><p>Yes. DogPulse is on the App Store for iPhone and on Google Play for Android. On the App Store, look for DogPulse: Dog Health Tracker.</p></details>
 <details class="faq"><summary>Can I track more than one dog?</summary><p>Yes. DogPulse Premium supports up to 3 dogs, each with their own logs, weight history, medications, vaccines and vet records. The free version tracks one dog.</p></details>
 <details class="faq"><summary>Does DogPulse work offline?</summary><p>Day-to-day tracking works offline. Logging, history, weights, medications and records are stored on your phone and need no connection. AI health insights require internet, because they are generated remotely. Crash reports, optional usage analytics and subscription checks also sync when you are online.</p></details>
 <details class="faq"><summary>Why use a dog health app instead of a notebook?</summary><p>A notebook records, but it cannot compare. DogPulse charts weight over time, searches months of notes by food or symptom, reminds you before a vaccine is due, and reads your own logs for patterns you would have to spot yourself. At a vet appointment you can show dates and trends rather than trying to recall them.</p></details>
@@ -386,7 +413,10 @@ a:hover{color:var(--brand);text-decoration:underline}
 <div class="narrow" style="text-align:center">
 <h2 class="h2" style="margin:0 0 12px">Start noticing today</h2>
 <p class="lead" style="margin:0 0 24px">Thirty seconds a day. Free to start, no account.</p>
+<div class="dp-row">
 <a class="cta cta-lg dp-play" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it free on Google&nbsp;Play</a>
+<a class="dp-store" href="/iphone"><!-- TODO: swap placeholder for the official Apple badge (see assets/app-store-badge-PLACEHOLDER.svg) --><img src="assets/app-store-badge-PLACEHOLDER.svg" alt="Download on the App Store" width="120" height="40" /></a>
+</div>
 </div>
 </section>
 
@@ -403,6 +433,7 @@ a:hover{color:var(--brand);text-decoration:underline}
 <a href="https://nova-hawthorn-6ef.notion.site/Terms-Conditions-35d8a263388180a9bfb4d85c33724b59" rel="noopener">Terms of Service</a>
 <a href="mailto:dogpulse.app@gmail.com">dogpulse.app@gmail.com</a>
 <a class="dp-play" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it on Google Play</a>
+<a href="/iphone">Download on the App Store</a>
 </nav>
 <div style="min-width:0">
 <p style="font-size:14px;color:var(--faint);margin:0 0 8px">Made for people who watch their dogs closely.</p>
@@ -414,7 +445,7 @@ a:hover{color:var(--brand);text-decoration:underline}
 </div>
 
 <div class="dp-sticky" id="dp-sticky">
-<div class="dp-sticky-in"><a class="cta dp-play" id="dp-sticky-cta" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it free on Google Play</a></div>
+<div class="dp-sticky-in"><a class="cta dp-play" id="dp-sticky-cta" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it free on Google Play</a><a class="dp-store" href="/iphone"><!-- TODO: swap placeholder for the official Apple badge (see assets/app-store-badge-PLACEHOLDER.svg) --><img src="assets/app-store-badge-PLACEHOLDER.svg" alt="Download on the App Store" width="120" height="40" /></a></div>
 </div>
 
 <script>
@@ -425,16 +456,8 @@ a:hover{color:var(--brand);text-decoration:underline}
       a.href += (a.href.indexOf("?") > -1 ? "&" : "?") + qs;
     }
   });
-  var ua = navigator.userAgent || "";
-  var isIOS = /iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
-  if (isIOS) {
-    var b = document.getElementById("dp-ios");
-    if (b) b.className = "dp-ios on";
-    var st = document.getElementById("dp-sticky-cta");
-    if (st) {
-      st.textContent = "Tell me when iOS is ready";
-      st.href = "mailto:dogpulse.app@gmail.com?subject=iOS%20waitlist&body=I'd%20like%20DogPulse%20on%20iPhone.";
-    }
+  if (/(^| )is-ios( |$)/.test(document.documentElement.className)) {
+    document.querySelectorAll("a.dp-premium").forEach(function(a){ a.href = "/iphone"; });
   }
 })();
 </script>
