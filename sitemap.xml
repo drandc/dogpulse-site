@@ -13,6 +13,12 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://dogpulse.app/privacy/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://dogpulse.app/guides/</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
