@@ -42,8 +42,8 @@ a:hover{color:var(--brand);text-decoration:underline}
 .cta:active{transform:translateY(0)}
 .cta-lg{font-size:17px;padding:17px 30px}
 .cta-sm{font-size:14px;padding:10px 16px;box-shadow:0 4px 12px rgba(90,50,20,.18)}
-.cta-ghost{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:var(--brand-d);border:1.5px solid var(--tintline);font-weight:600;font-size:16px;padding:14px 24px;border-radius:999px}
-.cta-ghost:hover{background:var(--tint);color:var(--brand-d);text-decoration:none}
+.dp-text-link{font-size:16px;font-weight:600;color:var(--brand-d);padding:6px 0}
+.dp-nav-link{font-size:15px;font-weight:600;color:var(--brand-d)}
 .eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
 .h2{font-size:clamp(25px,3.3vw,34px);line-height:1.2}
 .h3{font-size:clamp(21px,2.5vw,27px)}
@@ -66,24 +66,19 @@ a:hover{color:var(--brand);text-decoration:underline}
 .faq summary::after{content:"+";position:absolute;right:6px;top:15px;font-size:22px;font-weight:400;color:var(--brand-d)}
 .faq[open] summary::after{content:"\2212"}
 .faq p{font-size:16px;color:var(--muted);padding:0 0 20px}
-.dp-sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,248,240,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(90,50,20,.10);display:none}
+.dp-sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,248,240,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(90,50,20,.10);display:none;transform:translateY(110%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s}
+.dp-sticky.is-on{transform:none;visibility:visible;transition:transform .25s ease}
 .dp-sticky-in{max-width:520px;margin:0 auto}
 .dp-sticky .cta{width:100%;font-size:16px;padding:15px 18px}
-@media (max-width:760px){.dp-sticky{display:block}body{padding-bottom:88px}.feat{padding:22px}.hero-cta{width:100%;gap:10px}.hero-cta .cta,.hero-cta .cta-ghost,.hero-cta .dp-store{width:100%}.cta-lg{font-size:16px;padding:16px 24px}.proof{gap:8px}.proof li{font-size:13px;padding:7px 12px}}
 .dp-store{display:inline-flex;align-items:center;justify-content:center;line-height:0;border-radius:9px;transition:opacity .15s ease}
 .dp-store:hover{opacity:.85;text-decoration:none}
-.dp-store img{display:block;width:auto;height:58px}
-.dp-store-sm img{height:42px}
-.dp-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center}
-.dp-nav-stores{display:flex;gap:10px;align-items:center}
-.dp-sticky .dp-store{display:none}
-.dp-sticky .dp-store img{height:54px}
-html.is-ios .dp-sticky .dp-store{display:flex}
-html.is-ios .dp-sticky .dp-play{display:none}
-html.is-ios .hero-cta .dp-store{order:-1}
-@media (max-width:560px){html:not(.is-ios) .dp-nav-stores .dp-store{display:none}html.is-ios .dp-nav-stores .dp-play{display:none}}
-.dp-ios{display:none;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:var(--tint);border:1px solid var(--tintline);border-radius:18px;padding:16px 20px;margin:16px auto 0;max-width:1040px}
-html.is-ios .dp-ios{display:flex}
+.dp-store img{display:block;width:auto;height:44px}
+.dp-pair{display:flex;flex-wrap:wrap;gap:14px 16px;align-items:center;justify-content:center}
+.hero-cta{justify-content:flex-start}
+html.is-ios .dp-pair .dp-store{order:-1}
+#download,#get{scroll-margin-top:80px}
+@media (max-width:760px){.dp-sticky{display:block}body{padding-bottom:calc(88px + env(safe-area-inset-bottom))}.dp-nav-link{display:none}.feat{padding:22px}.dp-pair{flex-direction:column;gap:12px}.dp-pair .cta{width:100%}.cta-lg{font-size:16px;padding:16px 24px}.proof{gap:8px}.proof li{font-size:13px;padding:7px 12px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.dp-sticky,.dp-sticky.is-on{transition:none}}
 </style>
 <script type="application/ld+json">
 {
@@ -189,29 +184,21 @@ html.is-ios .dp-ios{display:flex}
 <img src="assets/dogpulse-paw.png" alt="DogPulse paw mark" width="512" height="512" style="width:36px;height:36px;border-radius:11px;display:block" />
 <span style="font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--ink)">DogPulse</span>
 </a>
-<div class="dp-nav-stores">
-<a class="cta cta-sm dp-play" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it free on Google&nbsp;Play</a>
-<a class="dp-store dp-store-sm" href="/iphone"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="120" height="40" /></a>
-</div>
+<a class="dp-nav-link" href="#download">Get the app</a>
 </div>
 </nav>
 
 <main id="top">
-
-<div id="dp-ios" class="dp-ios">
-<p style="font-size:17px;font-weight:700;margin:0">Now on iPhone</p>
-<a class="dp-store dp-store-sm" href="/iphone"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="120" height="40" /></a>
-</div>
 
 <section style="padding:52px 0 8px">
 <div class="wrap two" style="gap:40px">
 <div style="min-width:0">
 <h1 style="font-size:clamp(33px,5.4vw,52px);line-height:1.08;margin:0 0 18px">Notice what your dog can't tell you.</h1>
 <p style="font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:32em;margin:0 0 28px">DogPulse is the dog health tracker that turns thirty seconds a day into a record your vet can actually use, and reads it back to you when something starts to drift.</p>
-<div class="hero-cta" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+<div class="dp-pair hero-cta" id="download">
 <a class="cta cta-lg dp-play" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it free on Google&nbsp;Play</a>
 <a class="dp-store" href="/iphone"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="120" height="40" /></a>
-<a class="cta-ghost" href="#how">See how it works</a>
+<a class="dp-text-link" href="#how">See how it works</a>
 </div>
 <ul class="proof">
 <li>⭐ 1,000+ downloads</li>
@@ -303,11 +290,7 @@ html.is-ios .dp-ios{display:flex}
 <div class="wrap">
 <div style="background:var(--brand);border-radius:24px;padding:40px 28px;text-align:center;box-shadow:0 12px 30px rgba(90,50,20,.18)">
 <h2 class="h2" style="color:#fff;margin:0 0 10px;max-width:22em;margin-inline:auto">Start the record before you need it.</h2>
-<p style="font-size:17px;color:#FFF0E4;margin:0 0 24px;max-width:34em;margin-inline:auto">The day you wish you'd been writing it down is the day it's too late to start. Thirty seconds tonight is enough.</p>
-<div class="dp-row">
-<a class="cta cta-lg dp-play" style="background:#fff;color:var(--brand-d)" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it free on Google&nbsp;Play</a>
-<a class="dp-store" href="/iphone"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="120" height="40" /></a>
-</div>
+<p style="font-size:17px;color:#FFF0E4;margin:0;max-width:34em;margin-inline:auto">The day you wish you'd been writing it down is the day it's too late to start. Thirty seconds tonight is enough.</p>
 <p style="margin:14px 0 0;font-size:14px;color:#FFE3CE">Free to start · No account · iPhone and Android</p>
 </div>
 </div>
@@ -360,8 +343,8 @@ html.is-ios .dp-ios{display:flex}
 <li>Document attachments for vet visits</li>
 <li>Export your health data as CSV</li>
 </ul>
-<a class="cta dp-play dp-premium" style="width:100%;font-size:16px;padding:15px 20px" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get DogPulse Premium</a>
-<p style="margin:10px 0 0;font-size:13.5px;color:var(--faint);text-align:center">Cancel any time in Google Play or in your Apple Account settings</p>
+<p style="margin:0;text-align:center"><a class="dp-text-link" href="#get">Get the app</a></p>
+<p style="margin:6px 0 0;font-size:13.5px;color:var(--faint);text-align:center">Cancel any time in Google Play or in your Apple Account settings</p>
 </div>
 </div>
 </div>
@@ -409,11 +392,11 @@ html.is-ios .dp-ios{display:flex}
 </div>
 </section>
 
-<section style="padding:0 0 76px">
+<section id="get" style="padding:0 0 76px">
 <div class="narrow" style="text-align:center">
 <h2 class="h2" style="margin:0 0 12px">Start noticing today</h2>
 <p class="lead" style="margin:0 0 24px">Thirty seconds a day. Free to start, no account.</p>
-<div class="dp-row">
+<div class="dp-pair">
 <a class="cta cta-lg dp-play" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it free on Google&nbsp;Play</a>
 <a class="dp-store" href="/iphone"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="120" height="40" /></a>
 </div>
@@ -446,20 +429,32 @@ html.is-ios .dp-ios{display:flex}
 </div>
 
 <div class="dp-sticky" id="dp-sticky">
-<div class="dp-sticky-in"><a class="cta dp-play" id="dp-sticky-cta" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it free on Google Play</a><a class="dp-store" href="/iphone"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="120" height="40" /></a></div>
+<div class="dp-sticky-in"><a class="cta dp-play" id="dp-sticky-cta" href="https://play.google.com/store/apps/details?id=com.andre.dogpulse" rel="noopener">Get it free on Google Play</a></div>
 </div>
 
 <script>
 (function(){
   var qs = "utm_source=dogpulse.app&utm_medium=website&utm_campaign=landing";
+  if (/(^| )is-ios( |$)/.test(document.documentElement.className)) {
+    var s = document.getElementById("dp-sticky-cta");
+    s.href = "/iphone"; s.textContent = "Download on the App Store"; s.classList.remove("dp-play");
+  }
   document.querySelectorAll("a.dp-play").forEach(function(a){
     if (a.href.indexOf("play.google.com") > -1 && a.href.indexOf("utm_source") === -1) {
       a.href += (a.href.indexOf("?") > -1 ? "&" : "?") + qs;
     }
   });
-  if (/(^| )is-ios( |$)/.test(document.documentElement.className)) {
-    document.querySelectorAll("a.dp-premium").forEach(function(a){ a.href = "/iphone"; });
-  }
+  var bar = document.getElementById("dp-sticky"), hero = document.getElementById("download"), end = document.getElementById("get");
+  if (!("IntersectionObserver" in window)) { bar.classList.add("is-on"); return; }
+  var past = false, atEnd = false;
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var gone = !e.isIntersecting && e.boundingClientRect.top < 0;
+      if (e.target === hero) past = gone; else atEnd = e.isIntersecting || gone;
+    });
+    bar.classList.toggle("is-on", past && !atEnd);
+  });
+  io.observe(hero); io.observe(end);
 })();
 </script>
 </body>
